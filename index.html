@@ -38,8 +38,9 @@
   }
   .dek{color:var(--muted);font-size:20px;line-height:32px;margin:0 0 30px;}
 
-  .meta{margin:0 0 40px;display:flex;flex-direction:row;justify-content:space-between; padding-bottom: 40px;}
-  .meta .row{display:flex;flex-direction:column;gap:6px;}
+  .meta{margin:0 0 40px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px; padding-bottom: 40px;}
+  .meta .row{display:flex;flex-direction:column;gap:6px;min-width:0;}
+  .meta .val{white-space:normal;overflow-wrap:break-word;}
   .meta .label{font-weight:500;letter-spacing:-0.03em;color:var(--ink);}
   .meta .val{color:var(--muted);}
   .meta .row + .row{margin-top:2px;}
@@ -101,7 +102,7 @@
 
   <div class="meta">
   
-    <div class="row"><span class="label">Team</span><span class="val">2 Engineers, 2 Founders</span></div>
+    <div class="row"><span class="label">Team</span><span class="val">1 Designer, 2 Product Managers, 1 Engineer, 1 Sales Consultant </span></div>
     <div class="row"><span class="label">Tools Used</span><span class="val">Claude Code, Linear, Playwright</span></div>
     <div class="row"><span class="label">Timeline</span><span class="val">11 weeks (Jun 15 – Present)</span></div>
   </div>
@@ -112,15 +113,16 @@
       <h3 class="head">tl;dr</h3>
     </div>
     <div class="split-body">
-      <p>TimeTracer replaces the paper timesheet clipped to a clipboard on a job site — with a <strong>30-second voice log</strong> a crew member can leave from the truck, gloves still on, that becomes a structured, exportable timesheet. </p>
-        <p>As the only designer on the team, I owned the two surfaces that turn raw field entries into something a general contractor or auditor will accept: <strong>Reports</strong> and <strong>Calendar</strong>, plus the capture flow leading to them.</p>
-      <p>Working directly against a live engineering backlog, I shipped scoped report generation, AI-matched PDF invoice templates, batch export across crews, in-app translation for non-English-speaking labor, and the calendar/billing view enterprise contractors live in daily.</p>
+      <p>Construction crews log hours on paper, on a clipboard, on a job site. That paper trail is slow, error-prone, and painful for the super (the manager) to convert into invoice-ready reports. </p>
+      <p>TimeTracer is a <strong>voice-first app</strong> to solve that. A crew member logs their day from the truck, gloves still on, in about 30 seconds. That log becomes a structured, exportable timesheet.</p>
+      <p>As the only designer on the team, I owned the two surfaces that turn raw field entries into something a general contractor or auditor will accept: <strong>Reports</strong> and <strong>Calendar</strong>, plus the capture flow leading to them.</p>
+      
     </div>
   </div>
 
   <div class= "impact">
-    <h6 class="eyebrow">Impact</h3>
-    <h3 class="head"> The features built led us to onboard our first client within 90 days of me joining the team.</h3>
+    <h6 class="eyebrow">Impact</h6>
+    <h3 class="head"> The features I shipped got us our first client in under 3 months.</h3>
   </div>
 
   <hr>
@@ -134,8 +136,8 @@
     <p><span class="ink-strong">#1 Voice Capture, Translated</span> — <em>Weeks 1–2</em></p>
     <p>Set up the staging environment and shipped project creation by voice — built for someone standing on a job site with a phone in one hand, not sitting at a desk typing. Later added a language switcher on this screen, then extended translation across Reports, Materials, and Tools so non-English-speaking crews, a real presence on almost every job site, could use the same flow without a supervisor translating for them.</p>
     <figure class="screen">
-      <img src="images/tt-record.png" alt="TimeTracer voice recording screen with Voice, Manual, and Stopwatch tabs, and a language selector">
-    
+      <video src="videos/translation.mp4" autoplay muted loop playsinline disablePictureInPicture disableRemotePlayback style="display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:2px;"></video>
+      <figcaption>/app — Record tab, language switcher and in-app translation in action</figcaption>
     </figure>
   </div>
 
