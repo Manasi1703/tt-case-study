@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TimeTracer Case Study — Manasi Ghutukade</title>
+<meta name="description" content="Founding product design case study for TimeTracer, a voice-first time-tracking and reporting platform.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@400;700&family=Roboto+Mono:wght@400;500;700&display=swap');
+
+  :root{
+    --bg:#FFFFFF;
+    --ink:#1E1E1E;
+    --muted:#666666;
+    --faint:#969696;
+    --accent:#3A5A40;
+    --line:#E4E4E0;
+  }
+  /* Fixed light design, matching the reference case study exactly regardless of viewer theme. */
+
+  *{box-sizing:border-box;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Roboto Mono',ui-monospace,monospace;
+    font-size:20px;
+    line-height:32px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{width:100%;margin:0 auto;padding:80px 40px 120px;}
+  @media (min-width:768px){
+    .wrap{padding-left:150px;padding-right:150px;}
+  }
+  h1.title{
+    font-family:'Averia Serif Libre',serif;font-weight:400;
+    font-size:36px;line-height:43.2px;letter-spacing:-1.08px;
+    color:var(--accent);margin:26px 0 10px;text-wrap:balance;
+  }
+  .dek{color:var(--muted);font-size:20px;line-height:32px;margin:0 0 30px;}
+
+  .meta{margin:0 0 40px;}
+  .meta .row{display:flex;gap:6px;flex-wrap:wrap;}
+  .meta .label{font-weight:500;letter-spacing:-0.03em;color:var(--ink);}
+  .meta .val{color:var(--muted);}
+  .meta .row + .row{margin-top:2px;}
+
+  hr{border:none;border-top:1px solid var(--line);margin:44px 0;}
+
+  .split{display:grid;grid-template-columns:320px 1fr;gap:0 24px;align-items:start;}
+  @media (max-width:700px){
+    .split{grid-template-columns:1fr;gap:8px;}
+  }
+  .split-label h6.eyebrow{margin-bottom:6px;}
+  .split-label h3.head{margin-bottom:0;}
+  .split-body > *:first-child{margin-top:0;}
+
+  h6.eyebrow{
+    font-family:'Roboto Mono',monospace;font-weight:400;font-size:16px;
+    color:var(--faint);margin:0 0 6px;text-transform:uppercase;letter-spacing:0;
+  }
+  h3.head{
+    font-family:'Averia Serif Libre',serif;font-weight:400;font-size:24px;
+    line-height:30.8px;letter-spacing:-0.66px;color:var(--accent);
+    margin:0 0 16px;text-wrap:balance;
+  }
+  p{margin:0 0 20px;}
+  strong{font-weight:700;color:var(--muted);letter-spacing:-0.48px;}
+  .ink-strong{font-weight:700;color:var(--ink);}
+
+  .sub{margin:22px 0;}
+  .sub .label{font-weight:700;color:var(--ink);}
+  .sub p{margin:4px 0 0;color:var(--muted);}
+
+  blockquote{
+    margin:8px 0 0;padding:0;font-style:italic;color:var(--ink);
+  }
+
+  figure.screen{margin:22px 0 8px;}
+  figure.screen img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:2px;}
+  figure.screen figcaption{font-size:13px;color:var(--faint);margin-top:8px;line-height:20px;}
+
+  .feature{margin:30px 0 0;}
+  .feature .num{color:var(--faint);}
+
+  a.link{color:var(--accent);text-decoration:underline;}
+
+  .signoff{text-align:center;margin:60px 0 40px;}
+  .signoff h3{margin-bottom:4px;}
+  .signoff h6{color:var(--faint);font-size:16px;text-transform:none;}
+
+  ::selection{background:var(--accent);color:var(--bg);}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <h1 class="title">TimeTracer — Reporting for People Who Bill by the Hour</h1>
+  <p class="dek">Turning a spoken workday into an audit-ready, client-facing report — as the founding product designer.</p>
+
+  <div class="meta">
+    <div class="row"><span class="label">Role</span><span class="val">Founding Product Designer (solo)</span></div>
+    <div class="row"><span class="label">Company</span><span class="val">Foundry 01 LLC</span></div>
+    <div class="row"><span class="label">Team</span><span class="val">2 Engineers, 2 Founders</span></div>
+    <div class="row"><span class="label">Tools Used</span><span class="val">Figma, Linear, Playwright</span></div>
+    <div class="row"><span class="label">Timeline</span><span class="val">11 weeks (Jun 15 – Aug 31, 2026)</span></div>
+  </div>
+
+  <div class="split">
+    <div class="split-label">
+      <h6 class="eyebrow">BYTE-SIZED INFO</h6>
+      <h3 class="head">tl;dr</h3>
+    </div>
+    <div class="split-body">
+      <p>TimeTracer replaces the end-of-week scramble — sticky notes, memory, a spreadsheet — with a <strong>30-second voice log</strong> that becomes a structured, exportable timesheet. As the only designer on the team, I owned the two surfaces that turn raw entries into something a client or auditor will accept: <strong>Reports</strong> and <strong>Calendar</strong>, plus the capture flow feeding them.</p>
+      <p>Working directly against a live engineering backlog, I shipped scoped report generation, AI-matched PDF templates, batch export, in-app translation, and the calendar/billing view enterprise teams live in daily.</p>
+    </div>
+  </div>
+
+  <div class="split" style="margin-top:36px;">
+    <div class="split-label">
+      <h6 class="eyebrow">IMPACT</h6>
+    </div>
+    <div class="split-body">
+      <p><strong>The hardest problem isn't the UI — it's trust.</strong> A voice note has to become a number a client will pay against, in a format their accounting team already expects. That is the same job as any customer-facing dashboard built on top of a messy manual process: structure the input, make the output legible, never let the user doubt the number on screen.</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="split">
+    <div class="split-label">
+      <h6 class="eyebrow">THE WORK</h6>
+      <h3 class="head">Six weeks of shipping, in order.</h3>
+    </div>
+    <div class="split-body">
+      <p>Logged from my own weekly timesheets — the actual build sequence, not a reconstructed narrative.</p>
+
+  <div class="feature">
+    <p><span class="ink-strong">#1 Voice Capture, Translated</span> — <em>Weeks 1–2</em></p>
+    <p>Set up the staging environment and shipped project creation by voice, the entry point to the whole product. Later added a language switcher on this screen, then extended translation across Reports, Materials, and Tools so non-English-speaking crews could use the same flow.</p>
+    <figure class="screen">
+      <img src="images/tt-record.png" alt="TimeTracer voice recording screen with Voice, Manual, and Stopwatch tabs, and a language selector">
+      <figcaption>/app — Record tab, with the language switcher added in Week 5</figcaption>
+    </figure>
+  </div>
+
+  <div class="feature">
+    <p><span class="ink-strong">#2 Calendar, Rebuilt for Teams</span> — <em>Weeks 2–3</em></p>
+    <p>The calendar broke on mobile — cards cascaded and overlapped under real data. I redesigned the stacking for small screens, then extended the view for enterprise/team mode: rate, hours, and dollar totals sitting next to the schedule instead of buried in a separate report.</p>
+    <figure class="screen">
+      <img src="images/tt-calendar.png" alt="TimeTracer weekly calendar view with color-coded project blocks and a week totals table showing hours, rate, and amount">
+      <figcaption>/calendars/week — project blocks, with rate × hours totals below</figcaption>
+    </figure>
+  </div>
+
+  <div class="feature">
+    <p><span class="ink-strong">#3 Reports: Scope, Period, Export</span> — <em>Weeks 4, 6–8</em></p>
+    <p>Designed the report builder from a single CSV button into a proper generation flow — period type, custom date range, multi-select scope across projects and members. Added batch export so a manager could push reports for a whole org in one pass, and fixed the hour-rounding and sync bugs that made totals untrustworthy.</p>
+    <figure class="screen">
+      <img src="images/tt-reports.png" alt="TimeTracer report generation screen with period type toggle and project scope checklist">
+      <figcaption>/app/organization/reports — Generate Report, with scope multi-select</figcaption>
+    </figure>
+  </div>
+
+  <div class="feature">
+    <p><span class="ink-strong">#4 Templates: Teach the AI Your Paper Trail</span> — <em>Weeks 1, 4, 8</em></p>
+    <p>Enterprise clients don't want TimeTracer's report format — they want their own. Designed the upload flow for sample PDFs the AI matches style and structure against, on top of an OCR pass fixed for scanned source documents, so a generated report reads like it came from the client's own template.</p>
+    <figure class="screen">
+      <img src="images/tt-templates.png" alt="TimeTracer report templates screen showing an uploaded PDF template card and an Upload Template button">
+      <figcaption>/app/organization/reports — Templates tab, AI style-matching on upload</figcaption>
+    </figure>
+  </div>
+
+  <div class="feature">
+    <p><span class="ink-strong">#5 The Org Dashboard</span> — <em>Weeks 4, 7–8</em></p>
+    <p>Built the at-a-glance view owners and managers open first — total hours, billable split, active members and projects, and a daily trend — plus the filters driving every other view in the org shell. Paired with a collapsible navbar and design-system pass so the app didn't drift as features shipped fast.</p>
+    <figure class="screen">
+      <img src="images/tt-dashboard.png" alt="TimeTracer organization dashboard with stat tiles and an hours-over-time bar chart">
+      <figcaption>/app/organization — Dashboard, Test Enterprise Org view</figcaption>
+    </figure>
+  </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="split">
+    <div class="split-label">
+      <h6 class="eyebrow">HOW I WORKED</h6>
+      <h3 class="head">Embedded, not handed off.</h3>
+    </div>
+    <div class="split-body">
+      <p>I wasn't a designer feeding a backlog — I was in the backlog. Weekly 1:1s with the founders set direction; day to day I sat with the two engineers on tickets, PRs, and test coverage.</p>
+
+  <div class="sub"><span class="label">Reviewed code, not just comps:</span>
+    <p>Approved and tested teammates' PRs against the live UI, ran end-to-end and unit tests before sign-off, and resolved my own Linear tickets rather than filing them and moving on.</p></div>
+  <div class="sub"><span class="label">Tested on real staging data:</span>
+    <p>Built a dedicated QA account and walked full journey flows on timetracer-staging before each feature shipped, catching sync and rounding bugs before they reached a client's invoice.</p></div>
+  <div class="sub"><span class="label">Wrote the workflow, not just the UI:</span>
+    <p>Drafted and shipped a full workflow document defining the team-owner plan flow, used to brief engineering and align the founders before a single screen was built.</p></div>
+  <div class="sub"><span class="label">Grounded design in support signal:</span>
+    <p>Ran a design-system audit and pulled real complaints from Reddit and app-store reviews to prioritize which reporting bugs actually cost the product trust.</p></div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="split">
+    <div class="split-label">
+      <h6 class="eyebrow">CHALLENGES</h6>
+      <h3 class="head">What made it hard.</h3>
+    </div>
+    <div class="split-body">
+      <p>TimeTracer runs one codebase across two very different users — a solo contractor and a multi-team enterprise org — with permissions enforced at the database layer. Every screen had to hold up in both modes without forking the UI. Translation had to reach every surface a report touches, not just the obvious ones, and OCR on scanned client templates never quite reaches 100%, so the upload flow needed a graceful correction path, not a silent failure.</p>
+    </div>
+  </div>
+
+  <div class="split" style="margin-top:36px;">
+    <div class="split-label">
+      <h6 class="eyebrow">LEARNINGS</h6>
+      <h3 class="head">What stayed with me.</h3>
+    </div>
+    <div class="split-body">
+  <div class="sub"><span class="label">Ownership</span>
+    <p>Being the only designer meant every decision was mine to defend, in the PR and in the 1:1 — there was no one else to hand ambiguity to.</p></div>
+  <div class="sub"><span class="label">Trust is a design problem</span>
+    <p>A report that's 98% right is a report nobody uses. I learned to design for the edge case first, not the happy path.</p></div>
+  <div class="sub"><span class="label">Speed with a safety net</span>
+    <p>Shipping fast only worked because testing was part of the design process, not a separate step after it.</p></div>
+    </div>
+  </div>
+
+  <div class="signoff">
+    <h3 class="head">Thank you for reading!</h3>
+    <h6 class="eyebrow" style="text-align:center;">Onto the next build.</h6>
+  </div>
+
+</div>
+</body>
+</html>
