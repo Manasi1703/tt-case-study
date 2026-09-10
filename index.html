@@ -38,15 +38,15 @@
   }
   .dek{color:var(--muted);font-size:20px;line-height:32px;margin:0 0 30px;}
 
-  .meta{margin:0 0 40px;}
-  .meta .row{display:flex;gap:6px;flex-wrap:wrap;}
+  .meta{margin:0 0 40px;display:flex;flex-direction:row;justify-content:space-between; padding-bottom: 40px;}
+  .meta .row{display:flex;flex-direction:column;gap:6px;}
   .meta .label{font-weight:500;letter-spacing:-0.03em;color:var(--ink);}
   .meta .val{color:var(--muted);}
   .meta .row + .row{margin-top:2px;}
 
   hr{border:none;border-top:1px solid var(--line);margin:44px 0;}
 
-  .split{display:grid;grid-template-columns:320px 1fr;gap:0 24px;align-items:start;}
+  .split{display:grid;grid-template-columns:320px 1fr;gap:0 64px;align-items:start;}
   @media (max-width:700px){
     .split{grid-template-columns:1fr;gap:8px;}
   }
@@ -59,12 +59,12 @@
     color:var(--faint);margin:0 0 6px;text-transform:uppercase;letter-spacing:0;
   }
   h3.head{
-    font-family:'Averia Serif Libre',serif;font-weight:400;font-size:24px;
-    line-height:30.8px;letter-spacing:-0.66px;color:var(--accent);
+    font-family:'Averia Serif Libre',serif;font-weight:400;font-size:32px;
+    line-height: 1.3em;;letter-spacing:-0.66px;color:var(--accent);
     margin:0 0 16px;text-wrap:balance;
   }
   p{margin:0 0 20px;}
-  strong{font-weight:700;color:var(--muted);letter-spacing:-0.48px;}
+  strong{font-weight:700;color:var(--ink);letter-spacing:-0.48px;}
   .ink-strong{font-weight:700;color:var(--ink);}
 
   .sub{margin:22px 0;}
@@ -75,16 +75,16 @@
     margin:8px 0 0;padding:0;font-style:italic;color:var(--ink);
   }
 
-  figure.screen{margin:22px 0 8px;}
+  figure.screen{margin:22px 0 0;}
   figure.screen img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:2px;}
   figure.screen figcaption{font-size:13px;color:var(--faint);margin-top:8px;line-height:20px;}
 
-  .feature{margin:30px 0 0;}
+  .feature{margin:30px 0 0; padding-bottom: 40px; padding-top: 20px;}
   .feature .num{color:var(--faint);}
 
   a.link{color:var(--accent);text-decoration:underline;}
 
-  .signoff{text-align:center;margin:60px 0 40px;}
+  .signoff{text-align:center;margin:100px 0 20px;}
   .signoff h3{margin-bottom:4px;}
   .signoff h6{color:var(--faint);font-size:16px;text-transform:none;}
 
@@ -95,12 +95,11 @@
 
 <div class="wrap">
 
-  <h1 class="title">TimeTracer — Reporting for People Who Bill by the Hour</h1>
-  <p class="dek">Turning a spoken workday into an audit-ready, client-facing report — as the founding product designer.</p>
+  <h1 class="title">TimeTracer — Voice-Based Time Logging for Construction Crews</h1>
+  <p class="dek">Turning a foreman's spoken workday into an audit-ready, client-facing report — as the founding product designer.</p>
 
   <div class="meta">
-    <div class="row"><span class="label">Role</span><span class="val">Founding Product Designer (solo)</span></div>
-    <div class="row"><span class="label">Company</span><span class="val">Foundry 01 LLC</span></div>
+  
     <div class="row"><span class="label">Team</span><span class="val">2 Engineers, 2 Founders</span></div>
     <div class="row"><span class="label">Tools Used</span><span class="val">Figma, Linear, Playwright</span></div>
     <div class="row"><span class="label">Timeline</span><span class="val">11 weeks (Jun 15 – Aug 31, 2026)</span></div>
@@ -112,42 +111,35 @@
       <h3 class="head">tl;dr</h3>
     </div>
     <div class="split-body">
-      <p>TimeTracer replaces the end-of-week scramble — sticky notes, memory, a spreadsheet — with a <strong>30-second voice log</strong> that becomes a structured, exportable timesheet. As the only designer on the team, I owned the two surfaces that turn raw entries into something a client or auditor will accept: <strong>Reports</strong> and <strong>Calendar</strong>, plus the capture flow feeding them.</p>
-      <p>Working directly against a live engineering backlog, I shipped scoped report generation, AI-matched PDF templates, batch export, in-app translation, and the calendar/billing view enterprise teams live in daily.</p>
+      <p>TimeTracer replaces the paper timesheet clipped to a clipboard on a job site — with a <strong>30-second voice log</strong> a crew member can leave from the truck, gloves still on, that becomes a structured, exportable timesheet. As the only designer on the team, I owned the two surfaces that turn raw field entries into something a general contractor or auditor will accept: <strong>Reports</strong> and <strong>Calendar</strong>, plus the capture flow feeding them.</p>
+      <p>Working directly against a live engineering backlog, I shipped scoped report generation, AI-matched PDF invoice templates, batch export across crews, in-app translation for non-English-speaking labor, and the calendar/billing view enterprise contractors live in daily.</p>
     </div>
   </div>
 
-  <div class="split" style="margin-top:36px;">
-    <div class="split-label">
-      <h6 class="eyebrow">IMPACT</h6>
-    </div>
-    <div class="split-body">
-      <p><strong>The hardest problem isn't the UI — it's trust.</strong> A voice note has to become a number a client will pay against, in a format their accounting team already expects. That is the same job as any customer-facing dashboard built on top of a messy manual process: structure the input, make the output legible, never let the user doubt the number on screen.</p>
-    </div>
+  <div style="margin-top:36px;">
+    <h3 class="head">Impact</h3>
+    <p><strong>The hardest problem isn't the UI — it's trust.</strong> A voice note left from a job site has to become a number a general contractor will pay against, in a format their accounting office already expects. That is the same job as any complex, customer-facing operations dashboard — the kind used in industries like oil and gas — built on top of a messy manual process: structure the field input, make the output legible, never let the client doubt the number on screen.</p>
   </div>
 
   <hr>
 
-  <div class="split">
-    <div class="split-label">
-      <h6 class="eyebrow">THE WORK</h6>
-      <h3 class="head">Six weeks of shipping, in order.</h3>
-    </div>
-    <div class="split-body">
-      <p>Logged from my own weekly timesheets — the actual build sequence, not a reconstructed narrative.</p>
+  <div>
+    <h6 class="eyebrow">THE WORK</h6>
+    <h3 class="head">Six weeks of shipping, in order.</h3>
+    <p>Logged from my own weekly timesheets — the actual build sequence, not a reconstructed narrative.</p>
 
   <div class="feature">
     <p><span class="ink-strong">#1 Voice Capture, Translated</span> — <em>Weeks 1–2</em></p>
-    <p>Set up the staging environment and shipped project creation by voice, the entry point to the whole product. Later added a language switcher on this screen, then extended translation across Reports, Materials, and Tools so non-English-speaking crews could use the same flow.</p>
+    <p>Set up the staging environment and shipped project creation by voice — built for someone standing on a job site with a phone in one hand, not sitting at a desk typing. Later added a language switcher on this screen, then extended translation across Reports, Materials, and Tools so non-English-speaking crews, a real presence on almost every job site, could use the same flow without a supervisor translating for them.</p>
     <figure class="screen">
       <img src="images/tt-record.png" alt="TimeTracer voice recording screen with Voice, Manual, and Stopwatch tabs, and a language selector">
-      <figcaption>/app — Record tab, with the language switcher added in Week 5</figcaption>
+    
     </figure>
   </div>
 
   <div class="feature">
     <p><span class="ink-strong">#2 Calendar, Rebuilt for Teams</span> — <em>Weeks 2–3</em></p>
-    <p>The calendar broke on mobile — cards cascaded and overlapped under real data. I redesigned the stacking for small screens, then extended the view for enterprise/team mode: rate, hours, and dollar totals sitting next to the schedule instead of buried in a separate report.</p>
+    <p>The calendar broke on mobile — cards cascaded and overlapped under real data, unusable one-handed on a phone at a job site. I redesigned the stacking for small screens, then extended the view for enterprise/team mode: per-project rate, hours, and dollar totals sitting next to the schedule, so a subcontractor running crews across multiple sites can see who's owed what without opening a separate report.</p>
     <figure class="screen">
       <img src="images/tt-calendar.png" alt="TimeTracer weekly calendar view with color-coded project blocks and a week totals table showing hours, rate, and amount">
       <figcaption>/calendars/week — project blocks, with rate × hours totals below</figcaption>
@@ -156,7 +148,7 @@
 
   <div class="feature">
     <p><span class="ink-strong">#3 Reports: Scope, Period, Export</span> — <em>Weeks 4, 6–8</em></p>
-    <p>Designed the report builder from a single CSV button into a proper generation flow — period type, custom date range, multi-select scope across projects and members. Added batch export so a manager could push reports for a whole org in one pass, and fixed the hour-rounding and sync bugs that made totals untrustworthy.</p>
+    <p>Designed the report builder from a single CSV button into a proper generation flow — period type, custom date range, multi-select scope across job sites and crew members. Added batch export so a general contractor could push invoices for every crew on every site in one pass, and fixed the hour-rounding and sync bugs that made totals untrustworthy — the kind of small discrepancy that turns into a real dispute over a paycheck.</p>
     <figure class="screen">
       <img src="images/tt-reports.png" alt="TimeTracer report generation screen with period type toggle and project scope checklist">
       <figcaption>/app/organization/reports — Generate Report, with scope multi-select</figcaption>
@@ -165,7 +157,7 @@
 
   <div class="feature">
     <p><span class="ink-strong">#4 Templates: Teach the AI Your Paper Trail</span> — <em>Weeks 1, 4, 8</em></p>
-    <p>Enterprise clients don't want TimeTracer's report format — they want their own. Designed the upload flow for sample PDFs the AI matches style and structure against, on top of an OCR pass fixed for scanned source documents, so a generated report reads like it came from the client's own template.</p>
+    <p>General contractors don't want TimeTracer's report format — they want their own invoice, the same one they've been running for years. Designed the upload flow for sample PDFs the AI matches style and structure against, on top of an OCR pass fixed for scanned, sometimes handwritten source documents, so a generated report reads like it came off the client's own paper trail.</p>
     <figure class="screen">
       <img src="images/tt-templates.png" alt="TimeTracer report templates screen showing an uploaded PDF template card and an Upload Template button">
       <figcaption>/app/organization/reports — Templates tab, AI style-matching on upload</figcaption>
@@ -174,13 +166,12 @@
 
   <div class="feature">
     <p><span class="ink-strong">#5 The Org Dashboard</span> — <em>Weeks 4, 7–8</em></p>
-    <p>Built the at-a-glance view owners and managers open first — total hours, billable split, active members and projects, and a daily trend — plus the filters driving every other view in the org shell. Paired with a collapsible navbar and design-system pass so the app didn't drift as features shipped fast.</p>
+    <p>Built the at-a-glance view an owner running several crews across several job sites opens first — total hours, billable split, active members and active projects, and a daily trend — plus the site/crew filters driving every other view in the org shell. Paired with a collapsible navbar and design-system pass so the app didn't drift as features shipped fast.</p>
     <figure class="screen">
       <img src="images/tt-dashboard.png" alt="TimeTracer organization dashboard with stat tiles and an hours-over-time bar chart">
       <figcaption>/app/organization — Dashboard, Test Enterprise Org view</figcaption>
     </figure>
   </div>
-    </div>
   </div>
 
   <hr>
@@ -212,7 +203,7 @@
       <h3 class="head">What made it hard.</h3>
     </div>
     <div class="split-body">
-      <p>TimeTracer runs one codebase across two very different users — a solo contractor and a multi-team enterprise org — with permissions enforced at the database layer. Every screen had to hold up in both modes without forking the UI. Translation had to reach every surface a report touches, not just the obvious ones, and OCR on scanned client templates never quite reaches 100%, so the upload flow needed a graceful correction path, not a silent failure.</p>
+      <p>TimeTracer runs one codebase across two very different users — a solo tradesperson working alone and a general contractor running multiple crews across multiple job sites — with permissions enforced at the database layer. Every screen had to hold up in both modes without forking the UI. Translation had to reach every surface a report touches, not just the obvious ones, and OCR on scanned client templates never quite reaches 100% on a coffee-stained, handwritten paper timesheet, so the upload flow needed a graceful correction path, not a silent failure.</p>
     </div>
   </div>
 
